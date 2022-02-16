@@ -9,6 +9,7 @@ const int buzzer = 5; // variable for buzzer pin
 int buttonState = 0; // varaible for the current button state
 int startTime, currentTime; //variable for time
 
+int success; //variable for detecting if it fails or successful picks up the object
 
 int success_melody[] = {
   NOTE_C4, NOTE_G3, NOTE_G3, NOTE_A3, NOTE_G3, 0, NOTE_B3, NOTE_C4
@@ -34,9 +35,12 @@ void setup() {
   pinMode(buzzer, OUTPUT); //define buzzer as a output
 
 
-    //buzzer functions
-    successGrab();
-    failGrab();
+    //buzzer functions for when it sucessfully picks up the object or not
+    if success == true {
+      successGrab(); 
+    } else {
+      failGrab();
+    }
 }
 
 void loop() {
