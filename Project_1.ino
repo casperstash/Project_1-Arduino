@@ -36,11 +36,12 @@ void setup() {
 
 
     //buzzer functions for when it sucessfully picks up the object or not
-    if success == true {
+//    if success == true {
       successGrab(); 
-    } else {
+//    } else {
+      delay(3000);
       failGrab();
-    }
+//    }
 }
 
 void loop() {
