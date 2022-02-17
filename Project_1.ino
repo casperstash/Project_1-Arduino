@@ -39,7 +39,7 @@ void setup() {
 //    if success == true {
       successGrab(); 
 //    } else {
-      delay(3000);
+      delay(5000);
       failGrab();
 //    }
 }
